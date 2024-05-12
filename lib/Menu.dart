@@ -8,11 +8,23 @@ class Menu extends StatelessWidget {
 
   Menu({required this.paciente});
 
+  void _sair(BuildContext context) {
+    Navigator.popUntil(context, (route) => route.isFirst);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Olá, ${paciente.nome}!'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.exit_to_app),
+            onPressed: () {
+              _sair(context); // Retorna à tela de login ao clicar em "Sair"
+            },
+          ),
+        ],
       ),
       body: Center(
         child: Column(
@@ -21,7 +33,6 @@ class Menu extends StatelessWidget {
             SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () {
-                // Navega para a tela de prontuário e passa o objeto Paciente
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -34,11 +45,10 @@ class Menu extends StatelessWidget {
             SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () {
-                // Navega para a tela de exames
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ExamesScreen(paciente: paciente),
+                    builder: (context) => ExamesScreen(paciente: paciente),                   
                   ),
                 );
               },

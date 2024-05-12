@@ -23,7 +23,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login'),
+        title: Text('Sync Health'),
         backgroundColor: Color.fromARGB(255, 51, 110, 139),
       ),
       body: Center(

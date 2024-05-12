@@ -11,6 +11,13 @@ class LoginFormState extends State {
   String _cpf = '';
   String _password = '';
 
+  static final GlobalKey<LoginFormState> loginFormKey =
+      GlobalKey<LoginFormState>();
+
+  static LoginFormState? of(BuildContext context) {
+    return context.findAncestorStateOfType<LoginFormState>();
+  }
+
   void _login() {
     Paciente? pacienteLogado;
 
@@ -52,6 +59,7 @@ class LoginFormState extends State {
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: loginFormKey,
       color: Color.fromARGB(255, 255, 255, 255),
       child: Padding(
         padding: EdgeInsets.all(20.0),
