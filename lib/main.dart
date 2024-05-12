@@ -10,9 +10,6 @@ class LoginApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Login',
-      // theme: ThemeData(
-      //   primarySwatch: Colors.blue,
-      // ),
       home: LoginPage(),
     );
   }
@@ -23,8 +20,19 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sync Health'),
-        backgroundColor: Color.fromARGB(255, 51, 110, 139),
+        title: Text(
+          'Sync Health',
+          style: TextStyle(
+            color: const Color.fromARGB(
+                255, 255, 255, 255),
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+            fontStyle:
+                FontStyle.italic,
+            fontFamily: 'Roboto',
+          ),
+        ),
+        backgroundColor: Color.fromARGB(255, 75, 177, 228),
       ),
       body: Center(
         child: LoginForm(),

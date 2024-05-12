@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import './Paciente.dart';
 import './mock_data.dart';
 import 'Menu.dart';
-// Importe o arquivo de dados mocados
+
 
 class LoginFormState extends State {
-  final Paciente paciente1 = MockPacienteData.paciente1; // Use os dados mocados
-  final Paciente paciente2 = MockPacienteData.paciente2; // Use os dados mocados
+  final Paciente paciente1 = MockPacienteData.paciente1;
+  final Paciente paciente2 = MockPacienteData.paciente2;
 
   String _cpf = '';
   String _password = '';
@@ -28,14 +28,12 @@ class LoginFormState extends State {
     }
 
     if (pacienteLogado != null) {
-      // Se o login for bem-sucedido, navegue para a nova página e passe o objeto Paciente
       Navigator.push(
         context,
         MaterialPageRoute(
             builder: (context) => Menu(paciente: pacienteLogado!)),
       );
     } else {
-      // Caso contrário, exiba um popup com a mensagem de erro
       showDialog(
         context: context,
         builder: (BuildContext context) {
@@ -74,6 +72,23 @@ class LoginFormState extends State {
               },
               decoration: InputDecoration(
                 labelText: 'CPF',
+                labelStyle: TextStyle(
+                  color: Color.fromARGB(
+                      255, 100, 100, 100),
+                  fontSize: 12,
+                  fontWeight:
+                      FontWeight.bold,
+                ),
+                hintText: 'Digite seu CPF',
+                hintStyle: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 14,
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                  borderSide: BorderSide(
+                      color: Color.fromARGB(255, 77, 75, 75), width: 1.0),
+                ),
               ),
             ),
             SizedBox(height: 20.0),
@@ -86,12 +101,49 @@ class LoginFormState extends State {
               obscureText: true,
               decoration: InputDecoration(
                 labelText: 'Senha',
+
+                labelStyle: TextStyle(
+                  color: Color.fromARGB(
+                      255, 100, 100, 100),
+                  fontSize: 12,
+                  fontWeight:
+                      FontWeight.bold,
+                ),
+                hintText: 'Digite seu CPF',
+                hintStyle: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 14,
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                  borderSide: BorderSide(
+                      color: Color.fromARGB(255, 77, 75, 75), width: 1.0),
+                ),
               ),
             ),
             SizedBox(height: 20.0),
-            ElevatedButton(
-              onPressed: _login,
-              child: Text('Entrar'),
+            Container(
+              width: MediaQuery.of(context).size.width *
+                  0.8,
+              child: ElevatedButton(
+                onPressed: _login,
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(
+                        10),
+                  ),
+                ),
+                child: Text(
+                  'Entrar',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 0, 68, 95),
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                    fontFamily: 'Roboto',
+                  ),
+                ),
+              ),
             ),
           ],
         ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import './Paciente.dart';
-import './Exame.dart'; // Importe a classe Exame
-
+import './Exame.dart';
 class ExamesScreen extends StatelessWidget {
   final Paciente paciente;
 
@@ -9,12 +8,22 @@ class ExamesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Obtendo os próximos exames marcados para o paciente
     List<Exame> proximosExames = paciente.exames;
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Próximos Exames'),
+        backgroundColor: Color.fromARGB(255, 75, 177, 228),
+        title: Text(
+          'Próximos Exames',
+          style: TextStyle(
+            color: Color.fromARGB(255, 255, 254, 254),
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+            fontStyle:
+                FontStyle.italic,
+            fontFamily: 'Roboto',
+          ),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -26,12 +35,10 @@ class ExamesScreen extends StatelessWidget {
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 10.0),
-            // Exibir os exames em formato de lista
             ListView.builder(
               shrinkWrap: true,
               itemCount: proximosExames.length,
               itemBuilder: (context, index) {
-                // Obtendo o nome do exame, a data e o endereço
                 String nomeExame = proximosExames[index].nome;
                 DateTime dataExame = proximosExames[index].data;
                 String dataFormatada =

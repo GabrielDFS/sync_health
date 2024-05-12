@@ -1,5 +1,5 @@
 import 'Prontuario.dart';
-import 'Exame.dart'; // Importe a classe Exame
+import 'Exame.dart';
 
 class Paciente {
   int Id;
@@ -10,9 +10,8 @@ class Paciente {
   String matricula;
   String senha;
   List<Prontuario> prontuarios;
-  List<Exame> exames; // Adicionando a lista de exames
+  List<Exame> exames;
 
-  // Construtor
   Paciente({
     required this.Id,
     required this.nome,
@@ -22,6 +21,6 @@ class Paciente {
     required this.matricula,
     required this.senha,
     required this.prontuarios,
-    required this.exames, // Inicializando a lista de exames
+    required this.exames,
   });
 }
