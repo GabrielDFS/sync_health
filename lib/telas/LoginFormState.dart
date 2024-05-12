@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import './Paciente.dart';
-import './mock_data.dart';
+import '../classe/Paciente.dart';
+import '../mock_data.dart';
 import 'Menu.dart';
 
 

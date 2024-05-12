@@ -1,6 +1,6 @@
-import './Paciente.dart';
-import 'Prontuario.dart';
-import 'Exame.dart'; // Importe a classe Exame
+import 'classe/Paciente.dart';
+import 'classe/Prontuario.dart';
+import 'classe/Exame.dart'; // Importe a classe Exame
 
 class MockPacienteData {
   static final paciente1 = Paciente(

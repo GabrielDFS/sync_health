@@ -21,14 +21,12 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Sync Health',
+          'SyncHealth',
           style: TextStyle(
-            color: const Color.fromARGB(
-                255, 255, 255, 255),
+            color: const Color.fromARGB(255, 255, 255, 255),
             fontSize: 25,
             fontWeight: FontWeight.bold,
-            fontStyle:
-                FontStyle.italic,
+            fontStyle: FontStyle.italic,
             fontFamily: 'Roboto',
           ),
         ),

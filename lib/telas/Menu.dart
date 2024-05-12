@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import './Paciente.dart';
-import './ProntuarioScreen.dart';
-import './ExamesScreen.dart';
+import '../classe/Paciente.dart';
+import 'ProntuarioScreen.dart';
+import 'ExamesScreen.dart';
 
 class Menu extends StatelessWidget {
   final Paciente paciente;

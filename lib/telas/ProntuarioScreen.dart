@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './Paciente.dart';
+import '../classe/Paciente.dart';
 
 class ProntuarioScreen extends StatelessWidget {
   final Paciente paciente;
