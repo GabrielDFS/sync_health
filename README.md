@@ -18,6 +18,8 @@ O SyncHealth oferece as seguintes funcionalidades principais:
 
 5. **Usuários de teste:** Usuário 1 - CPF: 123.456.789-00 Senha: 123 || Usuário 2 - CPF: 987.654.321-00 Senha: 123 
 
+6. **APP:** APK publicável no diretório "build\app\outputs\flutter-apk\app-release.apk"
+
 
 ## Lista de Requisitos para Desenvolver com Flutter
 
