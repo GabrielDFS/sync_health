@@ -20,6 +20,8 @@ O SyncHealth oferece as seguintes funcionalidades principais:
 
 6. **APP:** APK publicável "\app-release.apk"
 
+7. **Link vídeo:** https://youtu.be/fJotuXXCDrw
+
 
 ## Lista de Requisitos para Desenvolver com Flutter
 
