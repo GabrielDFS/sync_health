@@ -1,4 +1,0 @@
-#Sun May 12 17:22:22 BRT 2024
-base.0=D\:\\Projetos\\sync_health\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

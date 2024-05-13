@@ -29,7 +29,7 @@ migrate_working_dir/
 .flutter-plugins-dependencies
 .pub-cache/
 .pub/
-# /build/  # Comentado para incluir a pasta build
+/build/
 
 # Symbolication related
 app.*.symbols
